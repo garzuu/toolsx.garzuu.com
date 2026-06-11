@@ -8,57 +8,59 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
+  <script src="i18n.js" defer></script>
 </head>
 <body>
   <div class="wrap">
     <nav>
       <img src="icon.png" alt="ToolsX">
       <a class="brand" href="index.html">ToolsX</a>
-      <a href="assistenza.html">Assistenza</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="assistenza.html" data-i18n="nav.support">Assistenza</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="#" id="lang-toggle" onclick="toggleLocale(); return false;" aria-label="Cambia lingua">EN</a>
     </nav>
 
     <div class="hero">
       <img class="appicon" src="icon.png" alt="Icona ToolsX">
       <h1>ToolsX</h1>
-      <p class="tagline">Il calcolatore di gas per immersioni tecniche e ricreative.
+      <p class="tagline" data-i18n="hero.tagline">Il calcolatore di gas per immersioni tecniche e ricreative.
         Nitrox, trimix e blending con ppO2 sempre sotto controllo.</p>
       <div class="badge-row">
         <span class="pill"><span class="dot">●</span> iOS 26</span>
         <span class="pill"><span class="dot">●</span> Italiano &amp; English</span>
-        <span class="pill"><span class="dot">●</span> Nessuna raccolta dati</span>
+        <span class="pill"><span class="dot">●</span> <span data-i18n="hero.pill.nodata">Nessuna raccolta dati</span></span>
       </div>
-      <a class="btn" href="#" aria-disabled="true">Presto su App Store</a>
+      <a class="btn" href="#" aria-disabled="true" data-i18n="hero.cta">Presto su App Store</a>
     </div>
 
     <div class="cards">
       <div class="card">
-        <h3><span class="ic">◆</span>Pianificatore gas</h3>
-        <p>Raccomandazione automatica nitrox o trimix da profondità e ppO2 massima, con MOD, END e densità del gas in tempo reale.</p>
+        <h3><span class="ic">◆</span><span data-i18n="card.gas.title">Pianificatore gas</span></h3>
+        <p data-i18n="card.gas.desc">Raccomandazione automatica nitrox o trimix da profondità e ppO2 massima, con MOD, END e densità del gas in tempo reale.</p>
       </div>
       <div class="card">
-        <h3><span class="ic">◆</span>Ricetta miscela</h3>
-        <p>Dalla miscela di partenza a quella obiettivo: aggiunte esatte di elio, ossigeno e aria, passo per passo.</p>
+        <h3><span class="ic">◆</span><span data-i18n="card.mix.title">Ricetta miscela</span></h3>
+        <p data-i18n="card.mix.desc">Dalla miscela di partenza a quella obiettivo: aggiunte esatte di elio, ossigeno e aria, passo per passo.</p>
       </div>
       <div class="card">
-        <h3><span class="ic">◆</span>Studio di miscelazione</h3>
-        <p>Sequenza di travaso scelta tra le 6 permutazioni per minimizzare il picco transitorio di ppO2.</p>
+        <h3><span class="ic">◆</span><span data-i18n="card.blend.title">Studio di miscelazione</span></h3>
+        <p data-i18n="card.blend.desc">Sequenza di travaso scelta tra le 6 permutazioni per minimizzare il picco transitorio di ppO2.</p>
       </div>
       <div class="card">
-        <h3><span class="ic">◆</span>Preset e unità</h3>
-        <p>Configurazioni salvate sul dispositivo, unità metriche o imperiali con conversione automatica.</p>
+        <h3><span class="ic">◆</span><span data-i18n="card.preset.title">Preset e unità</span></h3>
+        <p data-i18n="card.preset.desc">Configurazioni salvate sul dispositivo, unità metriche o imperiali con conversione automatica.</p>
       </div>
     </div>
 
     <div class="panel disclaimer">
-      <p><strong>Nota di sicurezza.</strong> ToolsX è uno strumento di supporto alla pianificazione:
+      <p data-i18n="disclaimer"><strong>Nota di sicurezza.</strong> ToolsX è uno strumento di supporto alla pianificazione:
         non sostituisce l'addestramento tecnico, l'analisi delle miscele né il computer subacqueo.
         Immergiti sempre nei limiti del tuo brevetto.</p>
     </div>
 
     <footer>
-      <p>© 2026 Matteo Garzulano. Tutti i diritti riservati.</p>
-      <p><a href="assistenza.html">Assistenza</a> · <a href="privacy.html">Privacy Policy</a></p>
+      <p data-i18n="footer.rights">© 2026 Matteo Garzulano. Tutti i diritti riservati.</p>
+      <p><a href="assistenza.html" data-i18n="footer.support">Assistenza</a> · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></p>
     </footer>
   </div>
 </body>

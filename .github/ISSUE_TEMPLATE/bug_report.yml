@@ -1,0 +1,41 @@
+name: "Bug report / Segnalazione bug"
+description: "Report a problem with ToolsX · Segnala un problema con ToolsX"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Cosa succede? / What happens?"
+      description: "Descrivi il problema · Describe the problem"
+      placeholder: "Es: il calcolo della MOD mostra un valore errato quando..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Passi per riprodurre / Steps to reproduce"
+      placeholder: |
+        1. Apri la tab Gas
+        2. Inserisci profondità 40 m
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Comportamento atteso / Expected behavior"
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: "Versione app e iOS / App & iOS version"
+      placeholder: "ToolsX 1.0 (1), iOS 26.5, iPhone 17 Pro"
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: "Screenshot o note / Screenshots or notes"
+    validations:
+      required: false

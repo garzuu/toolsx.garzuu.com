@@ -4,55 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assistenza — ToolsX</title>
-  <meta name="description" content="Assistenza e domande frequenti per ToolsX, il calcolatore gas per immersioni nitrox e trimix.">
+  <meta name="description" content="Assistenza per ToolsX: segnala bug su GitHub Issues, fai domande nelle Discussions o scrivici via email.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
+  <script src="i18n.js" defer></script>
 </head>
 <body>
   <div class="wrap">
     <nav>
       <img src="icon.png" alt="ToolsX">
       <a class="brand" href="index.html">ToolsX</a>
-      <a href="assistenza.html" class="active">Assistenza</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="assistenza.html" class="active" data-i18n="nav.support">Assistenza</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="#" id="lang-toggle" onclick="toggleLocale(); return false;" aria-label="Cambia lingua">EN</a>
     </nav>
 
     <div class="panel">
-      <h2>Assistenza</h2>
-      <p>Hai un problema con ToolsX, una domanda o un suggerimento? Scrivici: rispondiamo
-        di solito entro 48 ore.</p>
-      <p style="margin-top:14px"><a class="btn" href="mailto:matt.garzulano@gmail.com?subject=ToolsX%20-%20Assistenza">Contatta l'assistenza</a></p>
-      <p style="margin-top:10px; font-size:14px">Email: <a href="mailto:matt.garzulano@gmail.com">matt.garzulano@gmail.com</a></p>
+      <h2 data-i18n="support.title">Assistenza</h2>
+      <p data-i18n="support.intro">Bug, domande o proposte? Il canale preferito è GitHub: le segnalazioni
+        restano pubbliche e aiutano anche gli altri utenti.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3><span class="ic">◆</span><span data-i18n="support.bug.title">Segnala un bug</span></h3>
+        <p data-i18n="support.bug.desc">Hai trovato un malfunzionamento? Apri una issue su GitHub descrivendo i passi per riprodurlo.</p>
+        <p style="margin-top:14px"><a class="btn" href="https://github.com/garzuu/toolsx.garzuu.com/issues/new?labels=bug&template=bug_report.yml" target="_blank" rel="noopener" data-i18n="support.bug.cta">Apri una issue</a></p>
+      </div>
+      <div class="card">
+        <h3><span class="ic">◆</span><span data-i18n="support.disc.title">Domande e proposte</span></h3>
+        <p data-i18n="support.disc.desc">Per dubbi sull'uso, idee e richieste di nuove funzioni usa le discussioni su GitHub.</p>
+        <p style="margin-top:14px"><a class="btn" href="https://github.com/garzuu/toolsx.garzuu.com/discussions" target="_blank" rel="noopener" data-i18n="support.disc.cta">Vai alle discussioni</a></p>
+      </div>
+      <div class="card">
+        <h3><span class="ic">◆</span><span data-i18n="support.mail.title">Email</span></h3>
+        <p data-i18n="support.mail.desc">Per comunicazioni private (es. questioni relative alla privacy) puoi scriverci direttamente.</p>
+        <p style="margin-top:14px"><a class="btn ghost" href="mailto:matt.garzulano@gmail.com?subject=ToolsX" data-i18n="support.mail.cta">Scrivi un'email</a></p>
+      </div>
     </div>
 
     <div class="panel">
-      <h2>Domande frequenti</h2>
+      <h2 data-i18n="support.faq.title">Domande frequenti</h2>
 
-      <h3>I calcoli sostituiscono il mio computer subacqueo?</h3>
-      <p>No. ToolsX è un supporto alla pianificazione a secco. Analizza sempre le miscele con
+      <h3 data-i18n="support.faq.q1">I calcoli sostituiscono il mio computer subacqueo?</h3>
+      <p data-i18n="support.faq.a1">No. ToolsX è un supporto alla pianificazione a secco. Analizza sempre le miscele con
         strumenti calibrati e segui le procedure del tuo addestramento.</p>
 
-      <h3>Come cambio le unità di misura?</h3>
-      <p>Dal menu in alto a destra puoi passare tra metrico (m / bar / L) e imperiale
+      <h3 data-i18n="support.faq.q2">Come cambio le unità di misura?</h3>
+      <p data-i18n="support.faq.a2">Dal menu in alto a destra puoi passare tra metrico (m / bar / L) e imperiale
         (ft / psi / ft³). I valori inseriti vengono convertiti automaticamente.</p>
 
-      <h3>Dove sono salvati i miei preset?</h3>
-      <p>Solo sul tuo dispositivo. ToolsX non ha account, non usa il cloud e non invia dati
+      <h3 data-i18n="support.faq.q3">Dove sono salvati i miei preset?</h3>
+      <p data-i18n="support.faq.a3">Solo sul tuo dispositivo. ToolsX non ha account, non usa il cloud e non invia dati
         a server esterni.</p>
 
-      <h3>Come viene scelta la sequenza di miscelazione?</h3>
-      <p>L'app simula tutte le 6 permutazioni (He, O2, aria) e raccomanda quella con il minor
+      <h3 data-i18n="support.faq.q4">Come viene scelta la sequenza di miscelazione?</h3>
+      <p data-i18n="support.faq.a4">L'app simula tutte le 6 permutazioni (He, O2, aria) e raccomanda quella con il minor
         picco transitorio di ppO2. Puoi comunque forzare una sequenza manualmente.</p>
 
-      <h3>In che lingue è disponibile l'app?</h3>
-      <p>Italiano e inglese. ToolsX segue la lingua di sistema; puoi cambiarla per la singola
+      <h3 data-i18n="support.faq.q5">In che lingue è disponibile l'app?</h3>
+      <p data-i18n="support.faq.a5">Italiano e inglese. ToolsX segue la lingua di sistema; puoi cambiarla per la singola
         app da Impostazioni → ToolsX → Lingua.</p>
     </div>
 
     <footer>
-      <p>© 2026 Matteo Garzulano. Tutti i diritti riservati.</p>
-      <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a></p>
+      <p data-i18n="footer.rights">© 2026 Matteo Garzulano. Tutti i diritti riservati.</p>
+      <p><a href="index.html" data-i18n="footer.home">Home</a> · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></p>
     </footer>
   </div>
 </body>

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "Domande e proposte / Questions & ideas"
+    url: "https://github.com/garzuu/toolsx.garzuu.com/discussions"
+    about: "Per dubbi sull'uso e richieste di funzioni usa le Discussions · For usage questions and feature requests use Discussions"
+  - name: "Email (privato / private)"
+    url: "https://toolsx.garzuu.com/assistenza.html"
+    about: "Per comunicazioni private · For private matters"
